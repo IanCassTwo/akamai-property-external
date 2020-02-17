@@ -2,7 +2,7 @@
 
 This is a utility that allows you to utilize an existing Akamai Property Manager configuration as a "Golden Master".
 
-```json
+```
 data "external" "example" {
   program = ["./akamai-property-external"]
   query = {
@@ -16,7 +16,7 @@ data "external" "example" {
 
 and then in your akamai_property resource...
 
-```json
+```
 ...
   rules       = data.external.example.result.Rules
 ...
